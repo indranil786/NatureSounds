@@ -7,3 +7,7 @@ for the playing.
 
 ## Beach Side
 !["Screenshot of the Project"](svg/Beach.png)
+
+## Mobile Screenshot
+!["Screenshot of the Project"](svg/responsive.jpeg)
+
