@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.time-cont,
+.sound-picker,
+.player-cont {
+  height: 80%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.sound-picker button{
+    outline: none;
+}
+.sound-picker button:hover{
+    height: 16%;
+    width: 18%;
+}
+.vid-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.vid-container video {
+  min-width: 100%;
+  min-height: 100%;
+
+  width: auto;
+  height: auto;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player-cont {
+  position: relative;
+  height: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+.time-cont button {
+  border: solid 2px white;
+}
+
+.player-cont svg {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
+}
+.player-cont svg circle {
+  transition: all 0.2s ease-in-out;
+}
+
+.play,
+.replay {
+  position: absolute;
+  height: 15%;
+  cursor: pointer;
+}
+.replay {
+  top: -10px;
+  height: 17%;
+  width: 15%;
+  border: 2px solid white;
+  border-radius: 20%;
+  padding: 4px;
+}
+.time-display {
+  font-size: 3rem;
+  position: absolute;
+  bottom: -10px;
+  color: white;
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+button {
+  background: none;
+  border-style: none;
+  transition: all 0.5s ease;
+  outline: none;
+}
+.rain-button {
+  background-color: #056674;
+  border-radius: 50%;
+}
+.beach-button {
+  background-color: #ff4b5c;
+  border-radius: 50%;
+}
+.rain-img,
+.beach-img {
+  height: 80px;
+  width: 80px;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .time-cont,
+  .sound-picker,
+  .player-cont {
+    flex-direction: row;
+
+    width: 80%;
+  }
+  .time-cont {
+    width: 100%;
+  }
+  .play {
+    position: relative;
+    bottom: 5%;
+  }
+  .player-cont svg {
+    top: 45%;
+  }
+  .replay {
+    top: -25px;
+    width: 20%;
+  }
+  .time-display {
+    bottom: -25px;
+  }
+  .sound-picker button:hover{
+    height: auto;
+    width: auto;
+}
+}

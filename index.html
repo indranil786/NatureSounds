@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoulMusic</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://img.icons8.com/ios/30/000000/music-record.png" />
+</head>
+
+<body>
+    <!-- The Whole Body -->
+    <div class="app">
+        <!-- The Videos -->
+        <div class="vid-container">
+            <video loop>
+                <source src="./video/rain.mp4" type="" />
+            </video>
+        </div>
+        <!-- The Time Buttons -->
+        <div class="time-cont">
+            <button type="button" class="btn btn-outline-light btn-lg time1" data-time="120">
+                2 min
+            </button>
+            <button type="button" class="btn btn-outline-light btn-lg time2" data-time="300">
+                5 min
+            </button>
+            <button type="button" class="btn btn-outline-light btn-lg time3" data-time="600">
+                10 min
+            </button>
+        </div>
+        <!-- The Default Music and The Play, Pause, replay buttons -->
+        <div class="player-cont">
+            <audio id="default-sound">
+                <source src="./sounds/rain.mp3" />
+            </audio>
+            <img src="./svg/play.svg" class="play" alt="play" />
+            <svg width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="track-outline">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20" />
+            </svg>
+            <svg width="453" height="453" viewBox="0 0 453 453" fill="none" class="moving-outline"
+                xmlns="http://www.w3.org/2000/svg">
+                <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" />
+            </svg>
+            <img src="./svg/replay.svg" class="replay" alt="Replay" />
+            <div class="time-display">10 : 00</div>
+        </div>
+
+        <!--Choosing The Sound Environment  -->
+        <div class="sound-picker">
+            <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4" class="rain-button">
+                <img src="./svg/rain.svg" class="rain-img" alt="rain image" />
+            </button>
+            <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4" class="beach-button">
+                <img src="./svg/beach.svg" class="beach-img" alt="beach image" />
+            </button>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
